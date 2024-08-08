@@ -50,7 +50,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const buttons = document.querySelectorAll('.promptButton');
 
-    // Shuffle prompts array and select random prompts for buttons
     function getRandomPrompts(prompts, num) {
         let shuffled = prompts.sort(() => 0.5 - Math.random());
         return shuffled.slice(0, num);
@@ -63,3 +62,29 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+function toggleMenu() {
+    const sideMenu = document.querySelector('.side-menu');
+    sideMenu.classList.toggle('hidden');
+}
+
+document.querySelector('.close-menu').addEventListener('click', toggleMenu);
+
+document.head.insertAdjacentHTML('beforeend', `
+<style>
+    .side-menu.hidden {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+</style>
+`);
+
+function toggleMenu() {
+    const sideMenu = document.querySelector('.side-menu');
+    const openMenu = document.querySelector('.open-menu');
+
+    sideMenu.classList.toggle('hidden');
+    openMenu.classList.toggle('hidden');
+}
+
+document.querySelector('.close-menu').addEventListener('click', toggleMenu);
+document.querySelector('.open-button').addEventListener('click', toggleMenu);

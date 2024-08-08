@@ -22,14 +22,14 @@
         </div>
     </nav>
     
-    <div class="side-menu">
+    <div class="side-menu hidden">
         <div class="menu-item">
             <i class="icon home"></i>
             <span>Home</span>
         </div>
-        <div class="menu-item">
-            <i class="icon about"></i>
-            <span>About</span>
+        <div class="menu-item close-menu">
+            <i class="icon close">&#x2715;</i> 
+            <span>Close</span>
         </div>
         <div class="menu-item">
             <i class="icon services"></i>
@@ -39,6 +39,15 @@
             <i class="icon contact"></i>
             <span>Contact</span>
         </div>
+        <div class="history">
+            <h3>Request History</h3>
+            <div id="historyButtons"></div>
+            <ul id="historyList"></ul>
+        </div>
+    </div>
+    
+    <div class="open-menu">
+        <button class="open-button">Open Menu</button>
     </div>
 
     <form id="feedbackForm">

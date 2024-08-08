@@ -47,7 +47,7 @@ textarea::placeholder {
 }
 
 .promptButton:hover {
-    transform: scale(1.01);
+    transform: scale(1.02);
 }
 
 .button-container {
@@ -217,3 +217,83 @@ nav .nav-links li a:hover {
     background-color: #333;
 }
 
+.history {
+    margin-top: 20px;
+    padding: 10px;
+    color: #fff;
+}
+
+.history h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.history button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.history button:hover {
+    background-color: #444;
+}
+
+#historyList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#historyList li {
+    margin-bottom: 10px;
+}
+
+.close-menu {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 10px;
+    margin: 5px 10px;
+}
+
+.close-menu:hover {
+    background-color: #333;
+}
+
+.close-menu .icon {
+    margin-right: 10px;
+}
+
+.open-menu {
+    position: fixed;
+    top: 80px; /* Adjust as needed */
+    left: 20px; /* Same position as side menu */
+    display: flex;
+    align-items: center;
+    background-color: #212121;
+    padding: 1px;
+    border-radius: 5px;
+    z-index: 1000; /* Ensure it is above other content */
+}
+
+.open-button {
+    background-color: #212121;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.open-menu.hidden {
+    display: none; /* Hide when menu is open */
+}
