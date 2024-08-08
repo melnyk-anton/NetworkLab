@@ -22,8 +22,36 @@
         </div>
     </nav>
     
-    
+    <div class="side-menu">
+        <div class="menu-item">
+            <i class="icon home"></i>
+            <span>Home</span>
+        </div>
+        <div class="menu-item">
+            <i class="icon about"></i>
+            <span>About</span>
+        </div>
+        <div class="menu-item">
+            <i class="icon services"></i>
+            <span>Services</span>
+        </div>
+        <div class="menu-item">
+            <i class="icon contact"></i>
+            <span>Contact</span>
+        </div>
+    </div>
 
+    <form id="feedbackForm">
+        <div class="form-container">
+            <label for="freeform">Tell us how you heard about us:</label><br>
+            <textarea id="freeform" name="freeform" rows="4" cols="50" placeholder="Enter your text here..."></textarea><br>
+            <div class="prompt-container">
+                <button type="button" id="button1" class="promptButton">Prompt 1</button>
+                <button type="button" id="button2" class="promptButton">Prompt 2</button>
+            </div>
+        </div>
+    </form>
+ 
     <div class="container">
         <button id="fetchVideoButton" class="fetchVideoButton">Get Video</button>
         <div id="videoContainer" style="display: none;">

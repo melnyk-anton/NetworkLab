@@ -7,6 +7,55 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    flex-direction: column;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+textarea {
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+textarea::placeholder {
+    color: #999;
+}
+
+.promptButton {
+    flex: 1 1 auto; /* Allows buttons to shrink and grow */
+    min-width: 120px;
+    padding: 10px;
+    background-color: black;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden; /* Hides overflow text */
+    text-overflow: ellipsis; /* Adds ellipsis for overflow text */
+}
+
+.promptButton:hover {
+    transform: scale(1.01);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; 
+    margin-top: 10px;
+    flex-wrap: wrap;
 }
 
 .container {
@@ -19,7 +68,7 @@ body {
 
 .fetchVideoButton {
     background-color: black;
-    width: 200px; /* Adjust width as needed */
+    width: 200px;
     height: 40px;
     border-radius: 5px;
     color: white;
@@ -27,17 +76,16 @@ body {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 20px 0; /* Add some margin for spacing */
+    margin-top: 20px; 
     cursor: pointer;
     transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .fetchVideoButton:hover {
     transform: scale(1.05);
-    background-color: #333;
 }
 
-/* General Menu Styles */
+/* Menu */
 nav {
     position: fixed;
     top: 0;
@@ -85,10 +133,9 @@ nav .nav-links li a {
 }
 
 nav .nav-links li a:hover {
-    background: #333; /* Darker background on hover */
+    background: #333; 
 }
 
-/* Mobile Menu Styles */
 @media screen and (max-width: 970px) {
     nav .wrapper {
         padding: 0 15px;
@@ -142,3 +189,31 @@ nav .nav-links li a:hover {
         cursor: pointer;
     }
 }
+
+.side-menu {
+    width: 250px;
+    background-color: #212121;
+    height: 100vh;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 10px;
+    margin: 5px 10px;
+}
+
+.menu-item:hover {
+    background-color: #333;
+}
+
