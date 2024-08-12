@@ -6,7 +6,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     flex-direction: column;
 }
 
@@ -14,7 +13,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
+    margin-top: 100px;
 }
 
 textarea {
@@ -64,8 +63,27 @@ textarea::placeholder {
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
+    position: relative;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+#videoContainer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    width: 40%;
+    display: inline-block;
 }
 
+#videoElement {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
 .fetchVideoButton {
     background-color: black;
     width: 200px;
