@@ -1,5 +1,8 @@
 document.getElementById('fetchVideoButton').addEventListener('click', async () => {
     try {
+        videoElement.src = "https://static.videezy.com/system/resources/previews/000/037/474/original/circle_loading.mp4";
+        document.getElementById('videoContainer').style.display = 'block';
+        videoElement.play();
         const textField = document.getElementById('freeform');
         const response = await fetch('https://hook.eu2.make.com/7pbkrkwuqlcpme3d2hqb0mc3ytcinpsr', {
             method: 'POST',
