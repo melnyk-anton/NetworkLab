@@ -3,7 +3,7 @@ document.getElementById('fetchVideoButton').addEventListener('click', async () =
         videoElement.src = "https://static.videezy.com/system/resources/previews/000/037/474/original/circle_loading.mp4";
         document.getElementById('videoContainer').style.display = 'block';
         videoElement.play();
-        const textField = document.getElementById('freeform');
+        const textField = document.getElementById('text');
         const response = await fetch('https://hook.eu2.make.com/7pbkrkwuqlcpme3d2hqb0mc3ytcinpsr', {
             method: 'POST',
             headers: {
@@ -118,3 +118,5 @@ function toggleMenu() {
 
 document.querySelector('.close-menu').addEventListener('click', toggleMenu);
 document.querySelector('.open-button').addEventListener('click', toggleMenu);
+
+
