@@ -19,6 +19,7 @@ document.getElementById('fetchVideoButton').addEventListener('click', async () =
         const data = await response.json();
         if (data.videoUrl) {
             const videoElement = document.getElementById('videoElement');
+            videoElement.loop = false;
             videoElement.src = data.videoUrl;
             document.getElementById('videoContainer').style.display = 'block';
             videoElement.play();
