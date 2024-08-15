@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NetworkLab</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <nav>
+        <div class="wrapper">
+            <div class="container2" onclick="myFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <div class="logo">
+                <a href="#">NetworkLab</a>
+            </div>
+            
+            <ul class="nav-links">
+                <!--
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                -->
+            </ul>
+        </div>
+    </nav>
+
+    <!-- New left-side container -->
+    <div class="left-container">
+        <h2>Stages</h2>
+        <div class="circle2" style="opacity: 30%;">
+            <div class="circle">1</div>
+            <h1>Describe your idea</h1>
+        </div>
+        <div class="circle2" style="opacity: 30%;">
+            <div class="circle">2</div>
+            <h1>Edit images</h1>
+        </div>
+        <div class="circle2">
+            <div class="circle">3</div>
+            <h1>Edit text</h1>
+        </div>
+        <div class="circle2" style="opacity: 30%;">
+            <div class="circle">4</div>
+            <h1>Add sound</h1>
+        </div>
+    </div>
+
+    <!-- New textarea container -->
+    <div class="textarea-container">
+        <textarea id="textarea1" placeholder="Text for Image 1"></textarea>
+        <textarea id="textarea2" placeholder="Text for Image 2"></textarea>
+        <textarea id="textarea3" placeholder="Text for Image 3"></textarea>
+        <textarea id="textarea4" placeholder="Text for Image 4"></textarea>
+    </div>
+
+    <script src="script2.js"></script>
+    <script>
+        window.onload = function exampleFunction() { 
+            var image1 = localStorage.getItem('image1'); 
+            var image2 = localStorage.getItem('image2'); 
+            var image3 = localStorage.getItem('image3'); 
+            var image4 = localStorage.getItem('image4'); 
+            var imageElement1 = document.getElementById('imageElement1');
+            imageElement1.src = image1;
+            var imageElement2 = document.getElementById('imageElement2');
+            imageElement2.src = image2;
+            var imageElement3 = document.getElementById('imageElement3');
+            imageElement3.src = image3;
+            var imageElement4 = document.getElementById('imageElement4');
+            imageElement4.src = image4;
+        } 
+    </script>
+</body>
+
+
+
+</html>

@@ -1,11 +1,15 @@
 document.getElementById('fetchVideoButton').addEventListener('click', async () => {
     try {
-        const response = await fetch('https://hook.eu2.make.com/h8ueajp60sdylqzom9codc8e5o4ajado', {
+        videoElement.src = "https://static.videezy.com/system/resources/previews/000/037/474/original/circle_loading.mp4";
+        document.getElementById('videoContainer').style.display = 'block';
+        videoElement.play();
+        const textField = document.getElementById('text');
+        const response = await fetch('https://hook.eu2.make.com/7pbkrkwuqlcpme3d2hqb0mc3ytcinpsr', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ request: 'getVideo' })
+            body: JSON.stringify({ request: 'getVideo', content: textField.value})
         });
 
         if (!response.ok) {
@@ -59,12 +63,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
         button.addEventListener('click', async () => {
             try {
-                const response = await fetch('https://hook.eu2.make.com/h8ueajp60sdylqzom9codc8e5o4ajado', {
+                const textField = document.getElementById('freeform');
+                const response = await fetch('https://hook.eu2.make.com/7pbkrkwuqlcpme3d2hqb0mc3ytcinpsr', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify({ request: randomPrompts[index] })
+                    body: JSON.stringify({ request: randomPrompts[index], content: textField.vale })
                 });
 
                 if (!response.ok) {
@@ -113,3 +118,5 @@ function toggleMenu() {
 
 document.querySelector('.close-menu').addEventListener('click', toggleMenu);
 document.querySelector('.open-button').addEventListener('click', toggleMenu);
+
+
