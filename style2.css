@@ -243,23 +243,5 @@ body {
     border-radius: 10px; /* Match the border radius of the container */
 }
 
-/* Textarea Container Styles */
-.textarea-container {
-    margin-left: 550px; /* Adjust to position the textareas to the right of the left container */
-    padding-top: 40px; /* Add space between navbar and right-container */
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-}
 
-.textarea-container textarea {
-    width: 100%;
-    height: 100px; /* Adjust the height as needed */
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 2px solid #15012E;
-    box-sizing: border-box;
-    resize: none; /* Prevent resizing */
-}
+
