@@ -9,18 +9,11 @@
 <body>
     <nav>
         <div class="wrapper">
-            <div class="container2" onclick="myFunction(this)">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
-            </div>
+
             <div class="logo">
                 <a href="#">NetworkLab</a>
             </div>
             <button class="menu-toggle">&#9776;</button>
-            <ul class="nav-links">
-                <li><a href="#">Examples</a></li>
-            </ul>
         </div>
     </nav>
     
@@ -46,12 +39,11 @@
     </div>
     
 
-    <form id="feedbackForm">
         <div class="form-container">
             <div class="textarea-button-container">
                 <textarea placeholder="Give me a topic, language and key message" id="text" rows="4" name="text" style="overflow: hidden; word-wrap: break-word; resize: none;"></textarea>
-                <button id="fetchVideoButton" class="fetchVideoButton">Generate a video</button>
             </div>
+            <button id="fetchVideoButton" class="fetchVideoButton">Generate a video</button>
             <div class="container">
                 <div id="videoContainer" style="display: none;">
                     <video id="videoElement" controls width="600" loop></video>
@@ -59,8 +51,28 @@
             </div>
         </div>
         
-    </form>
-    
+        <section id="examples">
+            <h2 style="text-align: center; color: white">Examples</h2>
+            <div class="examples-container">
+                <div class="example">
+                    <h3>Generated video for brand</h3>
+                    <video controls width="300">
+                        <source src="https://cdn.creatomate.com/renders/bf9a9bfe-6668-411c-bc07-2a41126975fe.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Description of the first example video.</p>
+                </div>
+                <div class="example">
+                    <h3>Created quiz</h3>
+                    <video controls width="300">
+                        <source src="https://cdn.creatomate.com/renders/1f7ce30a-2590-4f11-b347-602cd5292d3f.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Description of the second example video.</p>
+                </div>
+            </div>
+        </section>
+
  
     
 
