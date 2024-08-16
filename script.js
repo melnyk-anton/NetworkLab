@@ -98,7 +98,6 @@ function toggleMenu() {
     sideMenu.classList.toggle('hidden');
 }
 
-document.querySelector('.close-menu').addEventListener('click', toggleMenu);
 
 document.head.insertAdjacentHTML('beforeend', `
 <style>
@@ -120,4 +119,8 @@ function toggleMenu() {
 document.querySelector('.close-menu').addEventListener('click', toggleMenu);
 document.querySelector('.open-button').addEventListener('click', toggleMenu);
 
+function myFunction(x) {
+    x.classList.toggle("change");
+    toggleMenu();
+  }
 

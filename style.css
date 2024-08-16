@@ -2,62 +2,73 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #121212;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
+@font-face {
+font-family: InterFontBlack;
+src: url(fonts/Inter_18pt-Black.ttf);
+}
+
+@font-face {
+font-family: InterFontsExtraLight;
+src: url(fonts/Inter_18pt-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: InterFontMedium;
+    src: url(fonts/Inter_18pt-Medium.ttf);
+    }
+
 .form-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 100px;
+    width: 500px;
 }
-
+    
+    
 
 
 textarea::placeholder {
     color: #999;
+    font-size: 20px;
+    font-family: InterFontMedium;
+    font-weight: 500;
+
+    line-height: 40px; /* Matches line-height to content */
 }
 
-.promptButton {
-    flex: 1 1 auto; /* Allows buttons to shrink and grow */
-    min-width: 120px;
-    padding: 10px;
-    background-color: black;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    text-align: center;
-    white-space: nowrap; /* Prevents text from wrapping */
-    overflow: hidden; /* Hides overflow text */
-    text-overflow: ellipsis; /* Adds ellipsis for overflow text */
-}
 
-.promptButton:hover {
-    transform: scale(1.02);
-}
 #text {
-    width:250%;
-	overflow:hidden;
-	background-color:#FFF;
-	color:#222;
-	font-family:Courier, monospace;
-	font-weight:normal;
-	font-size:18px;
-	resize:none;
-	line-height:40px;
-	background-repeat:repeat-y, repeat;
-	-webkit-border-radius:12px;
-	border-radius:12px;
-	-webkit-box-shadow: 0px 2px 14px #000;
-	box-shadow: 0px 2px 14px #000;
-	border-top:1px solid #FFF;
-	border-bottom:1px solid #FFF;
+    width: 100%; /* Make textarea take the full width of the container */
+    overflow: hidden;
+    background-color: #393939;
+    color: white;
+    font-family: InterFontMedium;
+    font-weight: 500;
+    font-size: 20px;
+    resize: none;
+    line-height: 40px;
+    padding-left: 10px;
+    padding-top: 10px;
+    background-repeat: repeat-y, repeat;
+    border-radius: 12px;
+    border-color: transparent;
+    border: none;
+    outline: none;
 }
+
+#text:focus {
+    outline: none; /* Ensure no outline on focus */
+}
+
+
 .button-container {
     display: flex;
     justify-content: center;
@@ -71,18 +82,14 @@ textarea::placeholder {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
-    position: relative;
     padding: 20px;
     margin-top: 20px;
-    text-align: center;
 }
 #videoContainer {
     margin-top: 20px;
     padding: 10px;
-    background-color: #f9f9f9;
+    background-color: #393939;
     border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 100%;
     width: 40%;
     display: inline-block;
@@ -93,19 +100,26 @@ textarea::placeholder {
     height: auto;
     border-radius: 5px;
 }
+
 .fetchVideoButton {
-    background-color: black;
+    background-color: #495BFF;
     width: 200px;
-    height: 40px;
-    border-radius: 5px;
+    height: 50px;
+    border-radius: 10px;
     color: white;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 16px;
-    margin-top: 20px; 
+    margin-top: 10px; /* Adds space between textarea and button */
     cursor: pointer;
-    transition: transform 0.2s ease, background-color 0.2s ease;
+    border: none;
+}
+.textarea-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Aligns the button to the right */
+    width: 100%;
+    position: relative;
 }
 
 .fetchVideoButton:hover {
@@ -125,12 +139,10 @@ nav {
 
 nav .wrapper {
     max-width: 1300px;
-    margin: auto;
     padding: 0 30px;
     height: 70px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
 nav .logo a {
@@ -138,7 +150,10 @@ nav .logo a {
     font-size: 30px;
     font-weight: 600;
     text-decoration: none;
+    margin-left: 48px
 }
+
+
  
 nav .nav-links {
     display: flex;
@@ -161,41 +176,6 @@ nav .nav-links li a {
 
 nav .nav-links li a:hover {
     background: #333; 
-}
-
-@media screen and (max-width: 970px) {
-    nav .wrapper {
-        padding: 0 15px;
-    }
-
-    nav .nav-links {
-        position: fixed;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        height: calc(100vh - 70px);
-        background: #000;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-        transform: translateY(-100%);
-        transition: transform 0.3s ease;
-    }
-
-    nav .nav-links.active {
-        transform: translateY(0);
-    }
-
-    nav .nav-links li {
-        margin: 15px 0;
-    }
-
-    nav .nav-links li a {
-        font-size: 22px;
-        padding: 15px 25px;
-    }
 }
 
 .menu-toggle {
@@ -323,4 +303,28 @@ nav .nav-links li a:hover {
 
 .open-menu.hidden {
     display: none; /* Hide when menu is open */
+}
+
+
+.bar1, .bar2, .bar3 {
+width: 35px;
+height: 5px;
+background-color: white;
+margin: 6px 0;
+transition: 0.4s;
+}
+
+.change .bar1 {
+transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+transform: translate(0, -11px) rotate(45deg);
+}
+
+.container2{
+    display: inline-block;
+    cursor: pointer;
 }

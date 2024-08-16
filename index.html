@@ -9,15 +9,17 @@
 <body>
     <nav>
         <div class="wrapper">
+            <div class="container2" onclick="myFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
             <div class="logo">
                 <a href="#">NetworkLab</a>
             </div>
             <button class="menu-toggle">&#9776;</button>
             <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#">Examples</a></li>
             </ul>
         </div>
     </nav>
@@ -27,10 +29,7 @@
             <i class="icon home"></i>
             <span>Home</span>
         </div>
-        <div class="menu-item close-menu">
-            <i class="icon close">&#x2715;</i> 
-            <span>Close</span>
-        </div>
+
         <div class="menu-item">
             <i class="icon services"></i>
             <span>Services</span>
@@ -46,28 +45,24 @@
         </div>
     </div>
     
-    <div class="open-menu">
-        <button class="open-button">Open Menu</button>
-    </div>
 
     <form id="feedbackForm">
         <div class="form-container">
-            <textarea placeholder="Describe your idea for the reel &#10(e.g., topic, key message, style)" id="text" rows="4" name="text" style="overflow: hidden; word-wrap: break-word; resize: none; "></textarea>  
-            <!--<div class="prompt-container">
-                <button type="button" id="button1" class="promptButton">Prompt 1</button>
-                <button type="button" id="button2" class="promptButton">Prompt 2</button>
+            <div class="textarea-button-container">
+                <textarea placeholder="Give me a topic, language and key message" id="text" rows="4" name="text" style="overflow: hidden; word-wrap: break-word; resize: none;"></textarea>
+                <button id="fetchVideoButton" class="fetchVideoButton">Generate a video</button>
             </div>
-        -->
-            
+            <div class="container">
+                <div id="videoContainer" style="display: none;">
+                    <video id="videoElement" controls width="600" loop></video>
+                </div>
+            </div>
         </div>
+        
     </form>
+    
  
-    <div class="container">
-        <button id="fetchVideoButton" class="fetchVideoButton">Get Video</button>
-        <div id="videoContainer" style="display: none;">
-            <video id="videoElement" controls width="600" loop></video>
-        </div>
-    </div>
+    
 
     <script src="script.js"></script>
 </body>
