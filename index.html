@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video Fetcher</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <nav>
@@ -41,9 +42,22 @@
 
         <div class="form-container">
             <div class="textarea-button-container">
-                <textarea placeholder="Give me a topic, language and key message" id="text" rows="4" name="text" style="overflow: hidden; word-wrap: break-word; resize: none;"></textarea>
+                <textarea placeholder="Give me topic and key message&#10;See examples of prompts below" id="text" rows="4" name="text" style="overflow: hidden; word-wrap: break-word; resize: none;"></textarea>
             </div>
-            <button id="fetchVideoButton" class="fetchVideoButton">Generate a video</button>
+            <div id = "containerForButton">
+                <button id="fetchVideoButton" class="fetchVideoButton">Generate a video</button> 
+            </div>
+            <!--
+            <button id="fetchVideoButton" class="fetchVideoButton" style="background-color:Red;">
+                <span class="loader">L &nbsp; ading</span>
+            </button>
+            -->
+            <!--
+            <button id="fetchVideoButton" class="fetchVideoButton">
+                <i class="fa fa-refresh" style="font-size:24px"></i>
+                Regenerate
+            </button>
+            -->
             <div class="container">
                 <div id="videoContainer" style="display: none;">
                     <video id="videoElement" controls width="600" loop></video>
@@ -55,20 +69,20 @@
             <h2 style="text-align: center; color: white">Examples</h2>
             <div class="examples-container">
                 <div class="example">
-                    <h3>Generated video for brand</h3>
+                    <h3>New Product Launch - Skincare Serum</h3>
                     <video controls width="300">
-                        <source src="https://cdn.creatomate.com/renders/bf9a9bfe-6668-411c-bc07-2a41126975fe.mp4" type="video/mp4">
+                        <source src="https://cdn.creatomate.com/renders/c1b253f3-bc4e-48b9-b3d7-a82cb92a8163.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                    <p>Description of the first example video.</p>
+                    <p class = "examples-text">Create a promotional video showcasing the benefits of a new skincare serum. The video should start by highlighting the key ingredients and their benefits, followed by photos of the serum being applied to the skin. Include before-and-after comparisons showing visible improvements in skin texture and brightness. Emphasize the key messages: "Reveal Your Radiance," "Clinically Proven Ingredients," and "Glowing Skin in Just 7 Days."</p>
                 </div>
                 <div class="example">
-                    <h3>Created quiz</h3>
+                    <h3>Limited-Time Offer - Fitness App Subscription</h3>
                     <video controls width="300">
-                        <source src="https://cdn.creatomate.com/renders/1f7ce30a-2590-4f11-b347-602cd5292d3f.mp4" type="video/mp4">
+                        <source src="https://cdn.creatomate.com/renders/04c5edfd-56ab-44ed-b683-36f2abf916d4.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                    <p>Description of the second example video.</p>
+                    <p class = "examples-text">Generate a promotional video to advertise a limited-time offer for a fitness app subscription. The video should showcase photos of diverse workout routines, highlighting features like personalized plans and progress tracking. Include key messages such as "Transform Your Workout," "Join Now for 50% Off," and "Your Fitness Journey Starts Here."</p>
                 </div>
             </div>
         </section>

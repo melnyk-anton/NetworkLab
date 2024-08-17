@@ -28,7 +28,7 @@ src: url(fonts/Inter_18pt-ExtraLight.ttf);
     display: flex;
     flex-direction: column;
     margin-top: 100px;
-    width: 700px;
+    width: 800px;
 }
     
     
@@ -108,7 +108,8 @@ textarea::placeholder {
     color: white;
     text-align: center;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight:700;
     margin-top: 10px; /* Adds space between textarea and button */
     cursor: pointer;
     border: none;
@@ -151,7 +152,9 @@ nav .logo a {
     font-size: 30px;
     font-weight: 600;
     text-decoration: none;
+    margin-left: 24px;
 }
+
 
 
  
@@ -331,14 +334,56 @@ transform: translate(0, -11px) rotate(45deg);
 
 .examples-container {
     display: flex;
-    justify-content: space-around;
+    justify-content:center;
     flex-wrap: wrap;
     text-align: center;
     color: white;
-    gap: 20px; /* Adds space between the videos */
+    gap: 10px; /* Reducing space between the videos */
 }
 
 .example {
     text-align: center;
     flex-basis: 30%; /* Adjust the percentage based on the number of videos */
+    margin: 5px; /* Reducing margin around each example */
+    padding: 5px; /* Reducing padding around each example */
+}
+
+.examples-text{
+    font-size: 20px;
+}
+
+
+.loader {
+    display: inline-block;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #FFF;
+    position: relative;
+  }
+  .loader::before {
+    content: '';  
+    position: absolute;
+    left: 17px;
+    bottom: 4px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2.5px solid #FFF;
+    border-bottom-color: #FF3D00;
+    box-sizing: border-box;
+    animation: rotation 0.6s linear infinite;
+  }
+  
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
+
+#containerForButton{
+    margin-left: auto;
 }
