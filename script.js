@@ -6,11 +6,15 @@ function changeToLoading() {
 function changeToRegenerate() {
     const generateVideoDiv = document.getElementById('containerForButton');
     generateVideoDiv.innerHTML = '<button id="fetchVideoButton" class="fetchVideoButton"><i class="fa fa-refresh" style="font-size:24px"></i> Regenerate</button>';
+    
 }
 generateVideoButton.addEventListener('click', async () => {
     try {
+
         changeToLoading();
         const videoElement = document.getElementById('videoElement');
+        videoElement.src = '';
+        document.getElementById('videoContainer').style.display = 'none';
         const textField = document.getElementById('text');
         const response = await fetch('https://hook.eu2.make.com/1gsmoulbtrw9hwpdi7679oo8cmucyxra', {
             method: 'POST',
@@ -19,16 +23,13 @@ generateVideoButton.addEventListener('click', async () => {
             },
             body: JSON.stringify({ request: 'getVideo', content: textField.value})
         });
-        console.log(111);
         const data = await response.json();
         if (data.url) {
             changeToRegenerate();
-            console.log(222);
-            videoElement.loop = false;
             videoElement.src = data.url;
             document.getElementById('videoContainer').style.display = 'block';
             videoElement.play();
-            console.log(333);
+            generateVideoButton = document.getElementById('fetchVideoButton');
         } else {
             console.error('No video URL returned');
         }
